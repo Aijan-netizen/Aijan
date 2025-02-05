@@ -6,16 +6,20 @@ class Book:
         self.price = price
 
     def read(self):
-        print(f"The book '{self.title}' by {self.author} is being read.")
+        print(f'Reading the book "{self.title}" by {self.author}.')
 
     def info(self):
-        print(f"Book title={self.title}, author={self.author}, ISBN={self.ISBN}, price={self.price}")
+        print(f'Title: {self.title}')
+        print(f'Author: {self.author}')
+        if self.ISBN:
+            print(f'ISBN: {self.ISBN}')
+        if self.price is not None:
+            print(f'Price: ${self.price:.2f}')
+        print()  # Adds an empty line for better readability
 
-if __name__ == "__main__":
-    book1 = Book("Death Souls", "Nikolai Gogol", "978-0140448078", 15)
-    book2 = Book("Cranes Fly Early", "Chyngyz Aitmatov")
-
+if __name__ == '__main__':
+    book1 = Book('Dead Souls', 'Nikolai Gogol', '978-0140448078', 15)
+    book2 = Book('Cranes Fly Early', 'Chyngyz Aitmatov')
     book1.info()
     book2.info()
-
-    book1.read()
+    book1.read() 
