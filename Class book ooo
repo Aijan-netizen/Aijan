@@ -12,8 +12,8 @@ class Book:
         print(f"Book title={self.title}, author={self.author}, ISBN={self.ISBN}, price={self.price}")
 
 if __name__ == "__main__":
-    book1 = Book("1984", "George Orwell", "978-0451524935", 15.99)
-    book2 = Book("Dune", "Frank Herbert")
+    book1 = Book("Death Souls", "Nikolai Gogol", "978-0140448078", 15)
+    book2 = Book("Cranes Fly Early", "Chyngyz Aitmatov")
 
     book1.info()
     book2.info()
