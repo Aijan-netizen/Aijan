@@ -34,9 +34,9 @@ The program uses two classes:
    - Transaction History (4): Shows all past transactions (deposits and withdrawals).
    - Exit (5): Exits the program.
  # Example and Tests
-   Test_results_OOP_3.docx
+3_OOP__Test_results.docx
 # UML diagram
-   uml__diagram__OOP3.PNG
+3_OOP__uml_diagram.PNG
 # What I Have Done
  - Created the Amount class to handle transactions (deposits and withdrawals).
  - Created the PersonalAccount class to manage the account balance and transaction history.
