@@ -33,10 +33,6 @@ The program uses two classes:
    - Check Balance (3): Displays the current balance.
    - Transaction History (4): Shows all past transactions (deposits and withdrawals).
    - Exit (5): Exits the program.
- # Example and Tests
-3_OOP__Test_results.docx
-# UML diagram
-3_OOP__uml_diagram.PNG
 # What I Have Done
  - Created the Amount class to handle transactions (deposits and withdrawals).
  - Created the PersonalAccount class to manage the account balance and transaction history.
