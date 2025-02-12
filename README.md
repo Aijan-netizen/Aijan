@@ -1,7 +1,7 @@
 # SECOND ASSIGNMENT 
-# Book Class 
+## Book Class 
 This project contains a `Book` class written in Python. It demonstrates object-oriented programming by defining attributes and methods for a book.
-# Class Description  
+### Class Description  
  - Attributes:
    - 'title' (str): The title of the book.
    - 'author' (str): The author of the book.
@@ -15,7 +15,7 @@ This project contains a `Book` class written in Python. It demonstrates object-o
    - 'read()' - Simulates reading the book by printing a message "You are reading (book title).". 
 
 # THIRD ASSIGNMENT
-# Personal Account Management
+## Personal Account Management
 This is a Python program to manage a personal bank account. It allows users to:
  - Deposit money
  - Withdraw money (with balance checks)
@@ -25,15 +25,7 @@ This is a Python program to manage a personal bank account. It allows users to:
 The program uses two classes:
  - `Amount`: Represents a single transaction (deposit or withdrawal).
  - `PersonalAccount`: Manages the account, including balance, deposits, withdrawals, and transaction history.
-# How It Works
- - Account Setup:
-   - The user provides their account number and name.
- - Menu Options:
-   - Deposit (1): Adds money to the account.
-   - Withdraw (2): Removes money from the account, with a check to ensure there are sufficient funds.
-   - Check Balance (3): Displays the current balance.
-   - Transaction History (4): Shows all past transactions (deposits and withdrawals).
-   - Exit (5): Exits the program.
+
 ##  How It Works  
 ### 🔹 Account Setup:  
 - The user provides their **account number** and **name**.  
@@ -77,7 +69,7 @@ Exiting program...
 📂 Project Structure
 ```
 ---
-### What I Have Done
+## What I Have Done
  - Created the `Amount` class to handle transactions (deposits and withdrawals).
  - Created the `PersonalAccount` class to manage the account balance and transaction history.
  - Implemented a menu system for user interaction.
