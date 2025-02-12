@@ -34,6 +34,30 @@ The program uses two classes:
    - Check Balance (3): Displays the current balance.
    - Transaction History (4): Shows all past transactions (deposits and withdrawals).
    - Exit (5): Exits the program.
+# Example code working
+Enter account number: `240102026`
+Enter account holder name: `Aijan`  
+
+1. 'Deposit'
+2. "Withdraw"
+3. Check Balance  
+4. Transaction History  
+5. Exit  
+
+Choose an option: 1  
+Enter deposit amount: 200  
+
+Choose an option: 2  
+Enter withdrawal amount: 2300  
+Insufficient funds  
+
+Choose an option: 3  
+Current Balance: 200  
+
+Choose an option: 4  
+2025-02-10 12:30:45 - DEPOSIT: 200  
+
+Choose an option: 5  
 # What I Have Done
  - Created the `Amount` class to handle transactions (deposits and withdrawals).
  - Created the `PersonalAccount` class to manage the account balance and transaction history.
