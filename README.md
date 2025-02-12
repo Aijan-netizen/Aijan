@@ -75,8 +75,8 @@ Choose an option: 4
 Choose an option: 5  
 Exiting program...  
 📂 Project Structure
-
-
+```
+---
 ### What I Have Done
  - Created the `Amount` class to handle transactions (deposits and withdrawals).
  - Created the `PersonalAccount` class to manage the account balance and transaction history.
