@@ -1,9 +1,8 @@
 import pandas as pd
 import numpy as np
 
-months = pd.Series(
-        data=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-        index=['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'])
+months = pd.Series (data=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                    index=['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'])
 print("Series with months:")
 print(months)
 
@@ -23,6 +22,7 @@ exam_data = {
     
 labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 df = pd.DataFrame(exam_data, index=labels)
+
 print("\nDataFrame with exam data:")
 print(df)
 
