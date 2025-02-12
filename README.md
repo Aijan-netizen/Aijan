@@ -22,8 +22,8 @@ This is a Python program to manage a personal bank account. It allows users to:
  - Check account balance
  - View transaction history
 The program uses two classes:
- - Amount: Represents a single transaction (deposit or withdrawal).
- - PersonalAccount: Manages the account, including balance, deposits, withdrawals, and transaction history.
+ - `Amount`: Represents a single transaction (deposit or withdrawal).
+ - `PersonalAccount`: Manages the account, including balance, deposits, withdrawals, and transaction history.
 # How It Works
  - Account Setup:
    - The user provides their account number and name.
@@ -34,7 +34,7 @@ The program uses two classes:
    - Transaction History (4): Shows all past transactions (deposits and withdrawals).
    - Exit (5): Exits the program.
 # What I Have Done
- - Created the Amount class to handle transactions (deposits and withdrawals).
- - Created the PersonalAccount class to manage the account balance and transaction history.
+ - Created the `Amount` class to handle transactions (deposits and withdrawals).
+ - Created the `PersonalAccount` class to manage the account balance and transaction history.
  - Implemented a menu system for user interaction.
  - Added balance checks before withdrawals to prevent overdraft.
