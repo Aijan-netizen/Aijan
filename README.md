@@ -50,23 +50,23 @@ Enter account holder name: Aijan
 4. Transaction History  
 5. Exit  
 
-Choose an option: 1  
-Enter deposit amount: 200  
-Deposited 200 successfully.  
+Choose an option: `1`  
+Enter deposit amount: `200`  
+`Deposited 200 successfully`  
 
-Choose an option: 2  
-Enter withdrawal amount: 2300  
-Insufficient funds
+Choose an option: `2`  
+Enter withdrawal amount: `2300`  
+`Insufficient funds`
 
-Choose an option: 3  
-Current Balance: 200  
+Choose an option: `3`  
+Current Balance: `200`  
 
-Choose an option: 4  
-2025-02-10 12:30:45 - DEPOSIT: 200  
+Choose an option: `4`  
+`2025-02-10 12:30:45 - DEPOSIT: 200`  
 
-Choose an option: 5  
-Exiting program...  
-📂 Project Structure
+Choose an option: `5`  
+`Exiting program...`
+
 ```
 ---
 ## What I Have Done
