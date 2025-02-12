@@ -51,54 +51,37 @@ The program uses two classes:
 ```bash
 Enter account number: 240102026  
 Enter account holder name: Aijan  
-markdown
-Copy
-Edit
+
 1. Deposit  
 2. Withdraw  
 3. Check Balance  
 4. Transaction History  
 5. Exit  
 bash
-Copy
-Edit
+
 Choose an option: 1  
 Enter deposit amount: 200  
 Deposited 200 successfully.  
 bash
-Copy
-Edit
+
 Choose an option: 2  
 Enter withdrawal amount: 2300  
 Insufficient funds  
 bash
-Copy
-Edit
+
 Choose an option: 3  
 Current Balance: 200  
 bash
 Copy
-Edit
+
 Choose an option: 4  
 2025-02-10 12:30:45 - DEPOSIT: 200  
 bash
-Copy
-Edit
+
 Choose an option: 5  
 Exiting program...  
 📂 Project Structure
 bash
-Copy
-Edit
-/PersonalAccountManagement
-│── main.py                   # Main program file  
-│── account.py                 # Contains the Amount and PersonalAccount classes  
-│── test_cases/                # Folder for test cases  
-│   ├── test_deposit.py  
-│   ├── test_withdraw.py  
-│   ├── test_balance.py  
-│── UML_Diagram.png            # UML diagram of the project  
-│── README.md                  # Documentation
 
 
 ### What I Have Done
