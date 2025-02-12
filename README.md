@@ -41,8 +41,8 @@ The program uses two classes:
 ## 🖥 Example Code Execution  
 
 ```bash
-Enter account number: 240102026  
-Enter account holder name: Aijan  
+Enter account number: `240102026`  
+Enter account holder name: `Aijan`  
 
 1. Deposit  
 2. Withdraw  
