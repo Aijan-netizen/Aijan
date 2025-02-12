@@ -57,31 +57,24 @@ Enter account holder name: Aijan
 3. Check Balance  
 4. Transaction History  
 5. Exit  
-bash
 
 Choose an option: 1  
 Enter deposit amount: 200  
 Deposited 200 successfully.  
-bash
 
 Choose an option: 2  
 Enter withdrawal amount: 2300  
-Insufficient funds  
-bash
+Insufficient funds
 
 Choose an option: 3  
 Current Balance: 200  
-bash
-Copy
 
 Choose an option: 4  
 2025-02-10 12:30:45 - DEPOSIT: 200  
-bash
 
 Choose an option: 5  
 Exiting program...  
 📂 Project Structure
-bash
 
 
 ### What I Have Done
