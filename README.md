@@ -17,16 +17,16 @@ This project includes three Python programs that demonstrate working with tuples
 
 #### 🔍 Output:
 ```
-Family members tuple: ('Father', 'Mother', 'Brother', 'Sister')
-Type of the tuple: <class 'tuple'>
-First member: Father
-Last member: Sister
+('mother', 'father', 'sister', 'brother', 'sister')
+Type of myfamily: <class 'tuple'>
+First occurrence of 'sister': sister
+Second occurrence of 'sister': sister
+Error: 'tuple' object has no attribute 'append'
+Error: 'tuple' object has no attribute 'pop'
 
-Attempting to append an item...
-AttributeError: 'tuple' object has no attribute 'append'
 
-Attempting to pop an item...
-AttributeError: 'tuple' object has no attribute 'pop'
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
 ```
 
 ---
@@ -41,13 +41,13 @@ AttributeError: 'tuple' object has no attribute 'pop'
 
 #### 🔍 Output:
 ```
-Laptop brand: Dell
+Brand: dell
+Updated laptop dictionary: {'brand': 'dell', 'model': 'alienware', 'year': 2010, 'home': True}
+Modified laptop dictionary: {'brand': 'dell', 'model': 'alienware', 'year': 2019, 'home': True}
 
-Updated dictionary:
-{'brand': 'Dell', 'model': 'XPS 13', 'year': 2018, 'home': True}
 
-Modified dictionary:
-{'brand': 'Dell', 'model': 'XPS 13', 'year': 2019, 'home': True}
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
 ```
 
 ---
