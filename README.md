@@ -10,10 +10,10 @@ This project includes three Python programs that demonstrate working with tuples
 ### 🏠 1. `myfamily.py`
 
 #### ✨ Functionality:
-✔ Defines a tuple containing family member roles.
-✔ Prints the tuple and its type.
-✔ Accesses and prints specific items using index numbers.
-✔ Attempts to modify the tuple using `append()` and `pop()`, resulting in errors since tuples are immutable.
+ ✔ Defines a tuple containing family member roles.
+ ✔ Prints the tuple and its type.
+ ✔ Accesses and prints specific items using index numbers.
+ ✔ Attempts to modify the tuple using `append()` and `pop()`, resulting in errors since tuples are immutable.
 
 #### 🔍 Expected Output:
 📌 Tuple contents and type.
@@ -67,16 +67,4 @@ This project includes three Python programs that demonstrate working with tuples
 ✅ Python 3
 ✅ Pandas library (for Pandas-related tasks)
 
-## ▶ Usage
-Run each script separately using Python to see the expected outputs.
-
-```bash
-python myfamily.py
-python laptop.py
-python user.py
-```
-
 ---
-
-📌 **Author:** Your Name  
-📆 **Last Updated:** YYYY-MM-DD
