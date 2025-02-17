@@ -64,10 +64,7 @@ This project includes three Python programs that demonstrate working with tuples
 ---
 
 
-### Second assignment README
-# README
-
-## Assignment 2: Pandas Series and DataFrame
+# Second assignment README: Pandas Series and DataFrame
 
 ### 1. Data Types for Pandas Series
 A Pandas Series can be created using the following data types:
