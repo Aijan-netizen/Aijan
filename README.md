@@ -61,14 +61,22 @@ Modified dictionary:
 
 #### 🔍 Output:
 ```
-Enter your name: John Doe
-Enter your age: 25
-Enter your favorite color: Blue
+What is the user's name? 
+BTS
+What is the user's age? 
+20
+What is the user's country of birth? 
+Korea
+What is the user known for? 
+You don't knoe BTS?
 
 User Information:
-Name: John Doe
-Age: 25
-Favorite Color: Blue
+Name: BTS
+Age: 20
+Country of Birth: Korea
+Known for: You don't knoe BTS?
+
+=== Code Execution Successful ===
 ```
 ---
 
