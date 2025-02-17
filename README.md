@@ -1,6 +1,6 @@
 # First assignment README
 
-## 📖 Overview
+## 📚 Overview
 This project includes three Python programs that demonstrate working with tuples, dictionaries, and Pandas data structures. Each program executes specific tasks and outputs corresponding results.
 
 ---
@@ -16,9 +16,18 @@ This project includes three Python programs that demonstrate working with tuples
  - ✔ Attempts to modify the tuple using `append()` and `pop()`, resulting in errors since tuples are immutable.
 
 #### 🔍 Expected Output:
-📌 Tuple contents and type.
-📌 Specific tuple values accessed by index.
-📌 Errors confirming tuple immutability.
+```
+Family members tuple: ('Father', 'Mother', 'Brother', 'Sister')
+Type of the tuple: <class 'tuple'>
+First member: Father
+Last member: Sister
+
+Attempting to append an item...
+AttributeError: 'tuple' object has no attribute 'append'
+
+Attempting to pop an item...
+AttributeError: 'tuple' object has no attribute 'pop'
+```
 
 ---
 
@@ -31,13 +40,19 @@ This project includes three Python programs that demonstrate working with tuples
 - ✔ Modifies an existing value (`year` changed to 2019).
 
 #### 🔍 Expected Output:
-📌 Brand of the laptop.
-📌 Updated dictionary including the new key-value pair.
-📌 Modified dictionary reflecting the updated year.
+```
+Laptop brand: Dell
+
+Updated dictionary:
+{'brand': 'Dell', 'model': 'XPS 13', 'year': 2018, 'home': True}
+
+Modified dictionary:
+{'brand': 'Dell', 'model': 'XPS 13', 'year': 2019, 'home': True}
+```
 
 ---
 
-### 👤 3. `user.py (BTS questions part) `
+### 👤 3. `user.py (BTS questions part)`
 
 #### ✨ Functionality:
 - ✔ Collects user information via input prompts.
@@ -45,22 +60,16 @@ This project includes three Python programs that demonstrate working with tuples
 - ✔ Displays the stored information in a structured format.
 
 #### 🔍 Expected Output:
-📌 User-entered details printed in a formatted manner.
+```
+Enter your name: John Doe
+Enter your age: 25
+Enter your favorite color: Blue
 
----
-
-### 📊 4. Additional Pandas Implementation
-
-#### ✨ Functionality:
-- ✔ Creates and prints a Pandas `Series` for months.
-- ✔ Defines a `Series` with student counts per department.
-- ✔ Constructs a `DataFrame` containing exam data and prints it.
-- ✔ Filters and prints rows where attempts exceed 2.
-
-#### 🔍 Expected Output:
-📌 Printed Pandas `Series` and `DataFrame`.
-📌 Filtered subset of the `DataFrame` displaying attempts greater than 2.
-
+User Information:
+Name: John Doe
+Age: 25
+Favorite Color: Blue
+```
 ---
 
 
@@ -146,4 +155,11 @@ b     Dima    9.0         3      no
 d    James    NaN         3      no
 f  Michael   20.0         3     yes
 ```
+### 💊 4. Additional Pandas Implementation
+
+#### ✨ Functionality:
+- ✔ Creates and prints a Pandas `Series` for months.
+- ✔ Defines a `Series` with student counts per department.
+- ✔ Constructs a `DataFrame` containing exam data and prints it.
+- ✔ Filters and prints rows where attempts exceed 2.
 
