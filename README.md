@@ -63,12 +63,6 @@ This project includes three Python programs that demonstrate working with tuples
 
 ---
 
-## ⚙ Requirements
-✅ Python 3
-✅ Pandas library (for Pandas-related tasks)
-
----
-
 
 ### Second assignment README
 # README
