@@ -1,4 +1,4 @@
-# 📌 Project README
+# First assignment README
 
 ## 📖 Overview
 This project includes three Python programs that demonstrate working with tuples, dictionaries, and Pandas data structures. Each program executes specific tasks and outputs corresponding results.
@@ -68,3 +68,91 @@ This project includes three Python programs that demonstrate working with tuples
 ✅ Pandas library (for Pandas-related tasks)
 
 ---
+
+
+### Second assignment README
+# README
+
+## Assignment 2: Pandas Series and DataFrame
+
+### 1. Data Types for Pandas Series
+A Pandas Series can be created using the following data types:
+- Lists
+- Tuples
+- Dictionaries
+- NumPy Arrays
+- Scalar values (single value repeated for index)
+
+---
+
+### 2. Creating a Series with Month Numbers
+A Pandas Series is created where month names are used as index labels, and their respective numerical values are used as data.
+
+**Output:**
+```
+Series with months:
+January      1
+February     2
+March        3
+April        4
+May          5
+June         6
+July         7
+August       8
+September    9
+October     10
+November    11
+December    12
+dtype: int64
+```
+
+---
+
+### 3. Creating a Series for Student Groups
+A Pandas Series is created using a dictionary that stores the number of students in different fresh batch groups.
+
+**Output:**
+```
+Series with the number of students:
+MATMIE     30
+MATDAIS    25
+COMSE      40
+COMCEH     35
+dtype: int64
+```
+
+---
+
+### 4. Creating and Displaying a DataFrame
+A DataFrame is created from a dictionary containing student examination data. The dictionary includes student names, scores, number of attempts, and qualification status. The DataFrame is displayed in a structured format.
+
+**Output:**
+```
+DataFrame with exam data:
+        name  score  attempts qualify
+a  Anastasia   12.5        1     yes
+b      Dima    9.0        3      no
+c  Katherine   16.5        2     yes
+d     James    NaN        3      no
+e     Emily    9.0        2      no
+f  Michael   20.0        3     yes
+g  Matthew   14.5        1     yes
+h     Laura    NaN        1      no
+i     Kevin    8.0        2      no
+j     Jonas   19.0        1     yes
+```
+
+---
+
+### 5. Selecting Rows Where Attempts > 2
+A DataFrame filter is applied to select rows where students have attempted the examination more than 2 times.
+
+**Output:**
+```
+Rows with attempts greater than 2:
+      name  score  attempts qualify
+b     Dima    9.0         3      no
+d    James    NaN         3      no
+f  Michael   20.0         3     yes
+```
+
