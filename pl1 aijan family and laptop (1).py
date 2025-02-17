@@ -14,7 +14,7 @@ try:
     my_family.pop(3)
 except AttributeError as e:
     print("Error:", e)
-print()  # Blank line between the two outputs
+print()  
 
 # laptop
 laptop = {"brand": "dell", "model": "alienware", "year": 2010}
