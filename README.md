@@ -81,6 +81,7 @@ Known for: You don't knoe BTS?
 ---
 
 
+
 # Second assignment README: Pandas Series and DataFrame
 
 ### 1. Data Types for Pandas Series
@@ -99,19 +100,20 @@ A Pandas Series is created where month names are used as index labels, and their
 **Output:**
 ```
 Series with months:
-January      1
-February     2
-March        3
-April        4
-May          5
-June         6
-July         7
-August       8
-September    9
-October     10
-November    11
-December    12
+January       1
+February      2
+March         3
+April         4
+May           5
+June          6
+July          7
+August        8
+September     9
+October      10
+November     11
+December     12
 dtype: int64
+
 ```
 
 ---
@@ -127,6 +129,7 @@ MATDAIS    25
 COMSE      40
 COMCEH     35
 dtype: int64
+
 ```
 
 ---
@@ -138,16 +141,17 @@ A DataFrame is created from a dictionary containing student examination data. Th
 ```
 DataFrame with exam data:
         name  score  attempts qualify
-a  Anastasia   12.5        1     yes
-b      Dima    9.0        3      no
-c  Katherine   16.5        2     yes
-d     James    NaN        3      no
-e     Emily    9.0        2      no
-f  Michael   20.0        3     yes
-g  Matthew   14.5        1     yes
-h     Laura    NaN        1      no
-i     Kevin    8.0        2      no
-j     Jonas   19.0        1     yes
+a  Anastasia   12.5         1     yes
+b       Dima    9.0         3      no
+c  Katherine   16.5         2     yes
+d      James    NaN         3      no
+e      Emily    9.0         2      no
+f    Michael   20.0         3     yes
+g    Matthew   14.5         1     yes
+h      Laura    NaN         1      no
+i      Kevin    8.0         2      no
+j      Jonas   19.0         1     yes
+
 ```
 
 ---
@@ -162,6 +166,11 @@ Rows with attempts greater than 2:
 b     Dima    9.0         3      no
 d    James    NaN         3      no
 f  Michael   20.0         3     yes
+
+
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
+
 ```
 ###  4. Additional Pandas Implementation
 
