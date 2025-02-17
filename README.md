@@ -15,7 +15,7 @@ This project includes three Python programs that demonstrate working with tuples
  - ✔ Accesses and prints specific items using index numbers.
  - ✔ Attempts to modify the tuple using `append()` and `pop()`, resulting in errors since tuples are immutable.
 
-#### 🔍 Expected Output:
+#### 🔍 Output:
 ```
 Family members tuple: ('Father', 'Mother', 'Brother', 'Sister')
 Type of the tuple: <class 'tuple'>
@@ -39,7 +39,7 @@ AttributeError: 'tuple' object has no attribute 'pop'
 - ✔ Adds a new key-value pair (`home: True`).
 - ✔ Modifies an existing value (`year` changed to 2019).
 
-#### 🔍 Expected Output:
+#### 🔍 Output:
 ```
 Laptop brand: Dell
 
@@ -59,7 +59,7 @@ Modified dictionary:
 - ✔ Stores the collected data in a dictionary.
 - ✔ Displays the stored information in a structured format.
 
-#### 🔍 Expected Output:
+#### 🔍 Output:
 ```
 Enter your name: John Doe
 Enter your age: 25
@@ -155,7 +155,7 @@ b     Dima    9.0         3      no
 d    James    NaN         3      no
 f  Michael   20.0         3     yes
 ```
-### 💊 4. Additional Pandas Implementation
+###  4. Additional Pandas Implementation
 
 #### ✨ Functionality:
 - ✔ Creates and prints a Pandas `Series` for months.
