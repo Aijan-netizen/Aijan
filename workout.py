@@ -1,4 +1,5 @@
-# workout1
+#workout1
+print ('workout1')
 a = int(input())
 b = int(input())
 print(a+b) # сложение
@@ -10,7 +11,9 @@ print(a%b) # остаток от деления
 print(a**b) # степень
 print(a!=b) #сравнение
 print()
-#workout2
+
+# workout2
+print ('workout2')
 x = 5
 y = 5
 if x == y:
@@ -19,18 +22,23 @@ else:
     result = False
 print(result)
 print()
+
 #workout3
+print ('workout3')
 x = int(input())
 if x == 5.0:
     print(True)
 else:
     print(False)
+    
+#Assignments
 print("Assignments")
-# Calculator
+
+#Calculator1
+print ('Calculator1')
 a = float(input("Enter the first number:"))
 b = float(input("Enter the second number:"))
 operation = input("Enter the operation (+,-,*,-,//,**,%):")
-
 if operation == "+":
     result = a+b 
 elif operation == "-" :
@@ -58,9 +66,12 @@ else:
     result = "Error"
 print (result)
 print()
-#Calculator 2
+
+#Calculator2
+print ('Calculator2')
 num = int(input("Enter the number:"))
 if num % 2 == 0:
     print ("четное")
 else:
     print("нечетное")
+
