@@ -75,3 +75,43 @@ if num % 2 == 0:
 else:
     print("нечетное")
 
+
+#Calculator 3
+a = float(input('Enter the 1st number'))
+b = float(input('Enter the 2nd number'))
+operation = input ('Choose the operation (*,-,/,+,//,%,**)')
+if operation == '+':
+    re = a+b
+elif operation == "-":
+    re = a-b
+elif operation == '*':
+    re = a*b
+elif operation == "/":
+    if  b != 0:
+        re = a/b
+    else:
+        re = None
+elif operation == '//':
+    if  b != 0:
+        re = a//b
+    else:
+        re = None
+elif operation == '%':
+    if  b != 0:
+        re = a%b
+    else:
+        re = None
+elif operation == '**':
+    re = a**b
+else:
+    re = None
+print(re)  
+if a % 2 == 0:
+    print ('chet')
+else:
+    print ("nechet")
+if a != 5:
+    print(True)
+else:
+    print(False)
+print(re)
