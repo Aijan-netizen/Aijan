@@ -1,33 +1,3 @@
-s1 = 'Hi'
-s2 = "Python"
-print(s1,s2)
-print()
-
-s = 'Python'
-print(s[0])
-print(s[-1])
-print()
-
-s = 'Programming'
-print(s[:5])
-print(s[2:5])
-print(s[::-1])
-print()
-
-s = "hello world"
-print(s.upper())
-print(s.replace("world", "Python"))
-print(s.split())
-print()
-
-s = "I am fine"
-print(s.upper())
-print(s.replace("fine", "good"))
-print(s.replace("am", "am not okay right now"))
-print(s.split())
-
-
-
 # str строки
 s1 = 'Hi'
 s2 = "Python"
