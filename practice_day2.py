@@ -11,3 +11,10 @@ for letter in s:
 print(len(s))
 print(s.isdigit())
 print(s.isupper())
+
+num = int(input())
+for i in range(num):
+    if i % 3 == 0:
+        print(i)
+    else:
+        print('no') 
