@@ -1,24 +1,24 @@
-from datetime import datetime
 import random
+import re
 import string
+from datetime import datetime
 
-# User Class
 class User:
     def __init__(self, user_id, name, surname, birthday):
         self.user_id = user_id
         self.name = name
         self.surname = surname
+        self.birthday = birthday
         self.email = None
         self.password = None
-        self.birthday = birthday
 
     def get_details(self):
         return f"User ID: {self.user_id}\nName: {self.name} {self.surname}\nEmail: {self.email}\nBirthday: {self.birthday.strftime('%d/%m/%Y')}"
 
     def get_age(self):
-        return datetime.today().year - self.birthday.year
+        today = datetime.today()
+        return today.year - self.birthday.year - ((today.month, today.day) < (self.birthday.month, self.birthday.day))
 
-# UserService Class
 class UserService:
     users = {}
 
@@ -28,7 +28,7 @@ class UserService:
 
     @classmethod
     def find_user(cls, user_id):
-        return cls.users.get(user_id)
+        return cls.users.get(user_id, None)
 
     @classmethod
     def delete_user(cls, user_id):
@@ -36,38 +36,38 @@ class UserService:
             del cls.users[user_id]
 
     @classmethod
-    def update_user(cls, user_id, user_update):
-        if user_id in cls.users:
-            cls.users[user_id] = user_update
+    def update_user(cls, user_id, **kwargs):
+        user = cls.find_user(user_id)
+        if user:
+            for key, value in kwargs.items():
+                if hasattr(user, key):
+                    setattr(user, key, value)
 
     @classmethod
     def get_number(cls):
         return len(cls.users)
 
-# UserUtil Class
 class UserUtil:
     @staticmethod
     def generate_user_id():
-        return int(f"{datetime.today().year % 100}{random.randint(1000000, 9999999)}")
+        year = str(datetime.today().year)[2:]  # Take last two digits of the year
+        random_digits = ''.join(random.choices(string.digits, k=7))
+        return int(year + random_digits)
 
     @staticmethod
     def generate_password():
-        password = ''.join(random.choices(string.ascii_letters + string.digits + string.punctuation, k=8))
-        return password
+        while True:
+            password = ''.join(random.choices(string.ascii_letters + string.digits + string.punctuation, k=10))
+            if UserUtil.is_strong_password(password):
+                return password
 
     @staticmethod
     def is_strong_password(password):
-        if len(password) < 8:
-            return False
-        if not any(c.islower() for c in password):
-            return False
-        if not any(c.isupper() for c in password):
-            return False
-        if not any(c.isdigit() for c in password):
-            return False
-        if not any(c in string.punctuation for c in password):
-            return False
-        return True
+        return (len(password) >= 8 and
+                any(c.isupper() for c in password) and
+                any(c.islower() for c in password) and
+                any(c.isdigit() for c in password) and
+                any(c in string.punctuation for c in password))
 
     @staticmethod
     def generate_email(name, surname, domain):
@@ -75,6 +75,5 @@ class UserUtil:
 
     @staticmethod
     def validate_email(email):
-        import re
-        pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-        return re.match(pattern, email) is not None
+        pattern = r"^[a-z]+\.[a-z]+@[a-z]+\.[a-z]+$"
+        return bool(re.match(pattern, email))
