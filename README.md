@@ -28,22 +28,22 @@ The system allows you to:
 ### Methods:  
 - `__init__(self, user_id, name, surname, birthday)`: Initializes a user with given details.  
 - `get_details(self) -> str`: Returns a formatted string containing user details.  
-- `get_age(self) -> int`: Computes and returns the user’s age.  
+- `get_age(self) -> int`: Calculates the user's age based on the current year. Month and day are not considered for accuracy.
 
----  
+---
 
-## 🔹 UserService Class  
-### Class Attribute:  
-- `users` (dict): Stores all user objects, where the key is `user_id`, and the value is the corresponding `User` object.  
+## 🔹 UserService Class
+### Class Attribute:
+- `users (dict)`: Stores all user objects, where the key is `user_id`, and the value is the corresponding `User` object.
 
-### Class Methods:  
+### Class Methods:
 - `add_user(cls, user: User)`: Adds a user to the system.  
 - `find_user(cls, user_id: int) -> User | None`: Finds and returns a user by their `user_id`.  
 - `delete_user(cls, user_id: int)`: Removes a user from the system.  
-- `update_user(cls, user_id: int, **kwargs): Updates a user’s attributes.
-- `get_number(cls) -> int`: Returns the total number of users.  
+- `update_user(cls, user_id: int, **kwargs)`: Updates a user’s attributes by passing keyword arguments.  
+- `get_number(cls) -> int`: Returns the total number of users.
 
----  
+---
 
 ## 🔹 UserUtil Class  
 ### Static Methods:  
@@ -51,12 +51,14 @@ The system allows you to:
 - `generate_password() -> str`: Generates a strong password (at least 8 characters, including uppercase, lowercase, digits, and special characters).  
 - `is_strong_password(password: str) -> bool`: Checks whether a password meets security requirements.  
 - `generate_email(name: str, surname: str, domain: str) -> str`: Creates an email address from the user’s name and surname.  
-- `validate_email(email: str) -> bool`: Verifies if an email address is in a valid format.  
+- `validate_email(email: str) -> bool`: Verifies if an email address is in a valid format.
 
----  
+---
 
 ## 🖥 Example Code Execution  
 ```python
+from datetime import datetime
+
 # Create a new user
 generated_id = UserUtil.generate_user_id()
 generated_password = UserUtil.generate_password()
@@ -72,7 +74,7 @@ UserService.add_user(user)
 print(UserService.find_user(generated_id).get_details())
 
 # Update user details
-UserService.update_user(generated_id, {"name": "Aizhan"})
+UserService.update_user(generated_id, name="Aizhan")
 print(UserService.find_user(generated_id).get_details())
 
 # Delete user
@@ -85,6 +87,6 @@ UserService.delete_user(generated_id)
 - Implemented password and email validation.  
 - Created test cases.  
 - Provided sample input/output examples.  
-- Included UML class diagram.  
+- Included UML class diagram.
 
 ---
