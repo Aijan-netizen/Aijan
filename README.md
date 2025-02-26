@@ -40,7 +40,7 @@ The system allows you to:
 - `add_user(cls, user: User)`: Adds a user to the system.  
 - `find_user(cls, user_id: int) -> User | None`: Finds and returns a user by their `user_id`.  
 - `delete_user(cls, user_id: int)`: Removes a user from the system.  
-- `update_user(cls, user_id: int, user_update: dict)`: Updates a user’s attributes.  
+- `update_user(cls, user_id: int, **kwargs): Updates a user’s attributes.
 - `get_number(cls) -> int`: Returns the total number of users.  
 
 ---  
