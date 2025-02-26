@@ -1,32 +1,38 @@
 # 4TH ASSIGNMENT
 ## Personal Account Management
-This is a Python program to manage a personal bank account. It allows users to:
- - Deposit money
- - Withdraw money (with balance checks)
- - Check account balance
- - View transaction history.
+This Python program provides a simple personal bank account management system, allowing users to:
 
-The program uses two classes:
- - `Amount`: Represents a single transaction (deposit or withdrawal).
- - `PersonalAccount`: Manages the account, including balance, deposits, withdrawals, and transaction history.
+- Deposit money
+- Withdraw money (with balance checks)
+- Check account balance
+- View transaction history
 
-##  How It Works  
-### 🔹 Account Setup:  
-- The user provides their **account number** and **name**.  
-### 🔹 Menu Options:  
+### Features
+
+- **Class-based Structure**: Uses `Transaction` and `BankAccount` classes for better data organization.
+- **Transaction History**: Records deposits and withdrawals.
+- **Balance Validation**: Prevents overdraft by checking available balance before withdrawals.
+- **User-Friendly Menu**: Allows easy navigation between actions.
+
+## How It Works
+
+### 🔹 Account Setup:
+- The user provides an **account number** and **name**.
+
+### 🔹 Menu Options:
 1️⃣ **Deposit** – Adds money to the account.  
-2️⃣ **Withdraw** – Removes money from the account, with a check to ensure there are sufficient funds.  
+2️⃣ **Withdraw** – Removes money from the account (if sufficient funds exist).  
 3️⃣ **Check Balance** – Displays the current balance.  
-4️⃣ **Transaction History** – Shows all past transactions (deposits and withdrawals).  
+4️⃣ **Transaction History** – Shows all past transactions.  
 5️⃣ **Exit** – Exits the program.  
 
 ---
 
-## 🖥 Example Code Execution  
+## 🖥 Example Execution
 
 ```bash
-Enter account number: `240102026`  
-Enter account holder name: `Aijan`  
+Enter account number: `240102026`
+Enter account holder name: `Aijan`
 
 1. Deposit  
 2. Withdraw  
@@ -36,7 +42,7 @@ Enter account holder name: `Aijan`
 
 Choose an option: `1`  
 Enter deposit amount: `200`  
-`Deposited 200 successfully`  
+`Deposited 200 successfully`
 
 Choose an option: `2`  
 Enter withdrawal amount: `2300`  
@@ -46,15 +52,21 @@ Choose an option: `3`
 Current Balance: `200`  
 
 Choose an option: `4`  
-`2025-02-10 12:30:45 - DEPOSIT: 200`  
+`Deposit: 200, Balance after: 200`
 
 Choose an option: `5`  
 `Exiting program...`
-
 ```
+
 ---
+
+## Implementation Details
+
+- **`Transaction` Class**: Represents an individual transaction.
+- **`BankAccount` Class**: Manages balance and transaction history.
+- **Interactive Menu**: Allows users to interact with the account easily.
+
 ## What I Have Done
- - Created the `Amount` class to handle transactions (deposits and withdrawals).
- - Created the `PersonalAccount` class to manage the account balance and transaction history.
- - Implemented a menu system for user interaction.
- - Added balance checks before withdrawals to prevent overdraft.
+- Refactored code for clarity and maintainability.
+- Improved transaction recording and output format.
+- Enhanced error handling and user prompts.
