@@ -1,72 +1,88 @@
 # 4TH ASSIGNMENT
-## Personal Account Management
-This Python program provides a simple personal bank account management system, allowing users to:
+# User Management System
 
-- Deposit money
-- Withdraw money (with balance checks)
-- Check account balance
-- View transaction history
+## Overview
+This Python project provides an object-oriented solution for managing user records. It includes three primary classes:
+- `User`: Represents an individual user.
+- `UserService`: Manages multiple users.
+- `UserUtil`: Provides utility functions for user creation and validation.
 
-### Features
-
-- **Class-based Structure**: Uses `Transaction` and `BankAccount` classes for better data organization.
-- **Transaction History**: Records deposits and withdrawals.
-- **Balance Validation**: Prevents overdraft by checking available balance before withdrawals.
-- **User-Friendly Menu**: Allows easy navigation between actions.
-
-## How It Works
-
-### 🔹 Account Setup:
-- The user provides an **account number** and **name**.
-
-### 🔹 Menu Options:
-1️⃣ **Deposit** – Adds money to the account.  
-2️⃣ **Withdraw** – Removes money from the account (if sufficient funds exist).  
-3️⃣ **Check Balance** – Displays the current balance.  
-4️⃣ **Transaction History** – Shows all past transactions.  
-5️⃣ **Exit** – Exits the program.  
+## Features
+The system allows you to:
+- Create and manage user accounts.
+- Store user details such as name, surname, email, password, and birthday.
+- Perform operations such as adding, updating, deleting, and retrieving users.
+- Generate secure passwords and validate emails.
 
 ---
 
-## 🖥 Example Execution
+## 🔹 User Class
+### Attributes:
+- `user_id` (int) – Unique identifier for the user.
+- `name` (str) – First name of the user.
+- `surname` (str) – Last name of the user.
+- `email` (str) – Email address of the user.
+- `password` (str) – Secure password of the user.
+- `birthday` (datetime) – Date of birth of the user.
 
+### Methods:
+- `__init__(self, user_id, name, surname, birthday)`: Initializes a user with given details.
+- `get_details(self) -> str`: Returns a formatted string containing user details.
+- `get_age(self) -> int`: Computes and returns the user’s age.
+
+---
+
+## 🔹 UserService Class
+### Class Attribute:
+- `users` (dict): Stores all user objects, where the key is `user_id`, and the value is the corresponding `User` object.
+
+### Class Methods:
+- `add_user(cls, user: User)`: Adds a user to the system.
+- `find_user(cls, user_id: int) -> User | None`: Finds and returns a user by their `user_id`.
+- `delete_user(cls, user_id: int)`: Removes a user from the system.
+- `update_user(cls, user_id: int, user_update: dict)`: Updates a user’s attributes.
+- `get_number(cls) -> int`: Returns the total number of users.
+
+---
+
+## 🔹 UserUtil Class
+### Static Methods:
+- `generate_user_id() -> int`: Generates a unique user ID with 9 digits. The first two digits correspond to the current year.
+- `generate_password() -> str`: Generates a strong password (at least 8 characters, including uppercase, lowercase, digits, and special characters).
+- `is_strong_password(password: str) -> bool`: Checks whether a password meets security requirements.
+- `generate_email(name: str, surname: str, domain: str) -> str`: Creates an email address from the user’s name and surname.
+- `validate_email(email: str) -> bool`: Verifies if an email address is in a valid format.
+
+---
+
+## 🖥 Example Code Execution
 ```bash
-Enter account number: `240102026`
-Enter account holder name: `Aijan`
+# Create a new user
+generated_id = UserUtil.generate_user_id()
+generated_password = UserUtil.generate_password()
+generated_email = UserUtil.generate_email("John", "Doe", "example.com")
 
-1. Deposit  
-2. Withdraw  
-3. Check Balance  
-4. Transaction History  
-5. Exit  
+user = User(generated_id, "John", "Doe", datetime(1995, 5, 20))
+user.password = generated_password
+user.email = generated_email
 
-Choose an option: `1`  
-Enter deposit amount: `200`  
-`Deposited 200 successfully`
+UserService.add_user(user)
 
-Choose an option: `2`  
-Enter withdrawal amount: `2300`  
-`Insufficient funds`
+# Retrieve user details
+print(UserService.find_user(generated_id).get_details())
 
-Choose an option: `3`  
-Current Balance: `200`  
+# Update user details
+UserService.update_user(generated_id, {"name": "Jonathan"})
+print(UserService.find_user(generated_id).get_details())
 
-Choose an option: `4`  
-`Deposit: 200, Balance after: 200`
-
-Choose an option: `5`  
-`Exiting program...`
+# Delete user
+UserService.delete_user(generated_id)
 ```
 
----
-
-## Implementation Details
-
-- **`Transaction` Class**: Represents an individual transaction.
-- **`BankAccount` Class**: Manages balance and transaction history.
-- **Interactive Menu**: Allows users to interact with the account easily.
-
-## What I Have Done
-- Refactored code for clarity and maintainability.
-- Improved transaction recording and output format.
-- Enhanced error handling and user prompts.
+## ✅ What Has Been Done
+- Implemented `User`, `UserService`, and `UserUtil` classes.
+- Added methods for user management.
+- Implemented password and email validation.
+- Created test cases.
+- Provided sample input/output examples.
+- Included UML class diagram.
