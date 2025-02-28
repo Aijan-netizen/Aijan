@@ -53,33 +53,7 @@ The system allows you to:
 - `generate_email(name: str, surname: str, domain: str) -> str`: Creates an email address from the user’s name and surname.  
 - `validate_email(email: str) -> bool`: Verifies if an email address is in a valid format.
 
----
-
-## 🖥 Example Code Execution  
-```python
-from datetime import datetime
-
-# Create a new user
-generated_id = UserUtil.generate_user_id()
-generated_password = UserUtil.generate_password()
-generated_email = UserUtil.generate_email("Aijan", "Tilekova", "example.com")
-
-user = User(generated_id, "Aijan", "Tilekova", datetime(2005, 12, 20))
-user.password = generated_password
-user.email = generated_email
-
-UserService.add_user(user)
-
-# Retrieve user details
-print(UserService.find_user(generated_id).get_details())
-
-# Update user details
-UserService.update_user(generated_id, name="Aizhan")
-print(UserService.find_user(generated_id).get_details())
-
-# Delete user
-UserService.delete_user(generated_id)
-```  
+---  
 
 ## ✅ What Has Been Done  
 - Implemented `User`, `UserService`, and `UserUtil` classes.  
