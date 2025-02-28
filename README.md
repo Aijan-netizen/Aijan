@@ -14,6 +14,14 @@ The program consists of the following components:
 - **Check Cart**: Displays the devices currently in the cart.
 - **Purchase**: Finalize the purchase of all items in the cart, displaying the total cost.
 
+## File Structure  
+
+- **`device.py`**: Contains the `Device` class, the base class for devices.
+- **`products.py`**: Contains the `Smartphone`, `Laptop`, and `Tablet` classes.
+- **`cart.py`**: Contains the `Cart` class for managing the shopping cart.
+- **`main.py`**: Main interface for interacting with the user.
+- **`test.py`**: Contains tests to verify the classes' functionality.
+
 ## Class Descriptions  
 
 ### `Device` Class
@@ -47,14 +55,6 @@ Manages the shopping cart.
    - `remove_device(self, device)`: Removes a device from the cart.
    - `view_cart(self)`: Displays devices in the cart.
    - `checkout(self)`: Completes the purchase and shows the total cost.
-
-## File Structure  
-
-- **`device.py`**: Contains the `Device` class, the base class for devices.
-- **`products.py`**: Contains the `Smartphone`, `Laptop`, and `Tablet` classes.
-- **`cart.py`**: Contains the `Cart` class for managing the shopping cart.
-- **`main.py`**: Main interface for interacting with the user.
-- **`test.py`**: Contains tests to verify the classes' functionality.
 
 ## How It Works  
 Users interact with the system through the following options:
