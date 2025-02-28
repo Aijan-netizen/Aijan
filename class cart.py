@@ -36,5 +36,6 @@ class Cart:
             return "Cart is empty. Cannot proceed to checkout."
         receipt = "\n".join([f"{qty} x {item.name} - ${item.price * qty:.2f}" for item, qty in self.items])
         self.items.clear()
+        total = self.total_price
         self.total_price = 0
-        return f"Checkout successful!\n{receipt}\nTotal: ${self.total_price:.2f}"
+        return f"Checkout successful!\n{receipt}\nTotal: ${total:.2f}"
