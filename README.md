@@ -1,76 +1,75 @@
-# SECOND ASSIGNMENT 
-## Book Class 
-This project contains a `Book` class written in Python. It demonstrates object-oriented programming by defining attributes and methods for a book.
-### Class Description  
- - Attributes:
-   - 'title' (str): The title of the book.
-   - 'author' (str): The author of the book.
-   - 'ISBN' (str): The International Standard Book Number of the book (optional).
-   - 'price' (float): The price of the book (optional).
- - Constructors:
-   - Parameterized constructor: Initializes all attributes with specific values.
-   - Default constructor: Initializes attributes with default values (None for string attributes and 0.0 for price).
- - Methods:  
-   - 'info()' - Displays book details(title, author, ISBN, price).  
-   - 'read()' - Simulates reading the book by printing a message "You are reading (book title).". 
+# FIFTH ASSIGNMENT 
+# Device Management System
+This project allows users to manage different types of devices (smartphones, laptops, tablets) and interact with a shopping cart system. It enables users to add, remove, and purchase devices from the cart.
 
-# THIRD ASSIGNMENT
-## Personal Account Management
-This is a Python program to manage a personal bank account. It allows users to:
- - Deposit money
- - Withdraw money (with balance checks)
- - Check account balance
- - View transaction history.
+## Overview  
+The program consists of the following main components:
+- **`Device`**: A base class representing a general device.
+- **`Smartphone`, `Laptop`, `Tablet`**: Classes inheriting from `Device`, representing specific types of devices.
+- **`Cart`**: A class for managing a shopping cart, including adding, removing, and completing purchases.
 
-The program uses two classes:
- - `Amount`: Represents a single transaction (deposit or withdrawal).
- - `PersonalAccount`: Manages the account, including balance, deposits, withdrawals, and transaction history.
+## Features  
+- **Add Device to Cart**: Add a specific device (smartphone, laptop, or tablet) to the cart.
+- **Remove Device from Cart**: Remove a device from the cart.
+- **Check Cart**: Display the devices currently in the cart.
+- **Purchase**: Complete the purchase of all items in the cart.
 
-##  How It Works  
-### 🔹 Account Setup:  
-- The user provides their **account number** and **name**.  
-### 🔹 Menu Options:  
-1️⃣ **Deposit** – Adds money to the account.  
-2️⃣ **Withdraw** – Removes money from the account, with a check to ensure there are sufficient funds.  
-3️⃣ **Check Balance** – Displays the current balance.  
-4️⃣ **Transaction History** – Shows all past transactions (deposits and withdrawals).  
-5️⃣ **Exit** – Exits the program.  
+## Class Descriptions  
 
----
+### `Device` Class
+This is the base class representing a general device.
 
-## 🖥 Example Code Execution  
+- **Attributes**:
+   - `name` (str): The name of the device.
+   - `brand` (str): The brand of the device.
+   - `price` (float): The price of the device.
+   - `category` (str): The category of the device (e.g., smartphone, laptop, tablet).
 
-```bash
-Enter account number: `240102026`  
-Enter account holder name: `Aijan`  
+- **Methods**:
+   - `__init__(self, name, brand, price, category)`: Initializes a device with the given name, brand, price, and category.
+   - `get_device_info()`: Returns a string containing the device's details (name, brand, price, category).
 
-1. Deposit  
-2. Withdraw  
-3. Check Balance  
-4. Transaction History  
-5. Exit  
+### `Smartphone`, `Laptop`, `Tablet` Classes
+These are subclasses of `Device`, each representing a specific type of device.
 
-Choose an option: `1`  
-Enter deposit amount: `200`  
-`Deposited 200 successfully`  
+- **Attributes** (inherited from `Device`):
+   - `name`, `brand`, `price`, `category`.
 
-Choose an option: `2`  
-Enter withdrawal amount: `2300`  
-`Insufficient funds`
+- **Methods**:
+   - `__init__(self, name, brand, price)`: Initializes the specific device type with the provided name, brand, and price.
 
-Choose an option: `3`  
-Current Balance: `200`  
+### `Cart` Class
+This class manages the shopping cart, allowing users to add, remove, and view devices.
 
-Choose an option: `4`  
-`2025-02-10 12:30:45 - DEPOSIT: 200`  
+- **Attributes**:
+   - `devices` (list): A list that stores the devices in the cart.
 
-Choose an option: `5`  
-`Exiting program...`
+- **Methods**:
+   - `add_device(self, device)`: Adds a device to the cart.
+   - `remove_device(self, device)`: Removes a device from the cart.
+   - `view_cart(self)`: Displays all devices currently in the cart.
+   - `checkout(self)`: Completes the purchase, displaying the total cost and confirming the transaction.
 
-```
----
-## What I Have Done
- - Created the `Amount` class to handle transactions (deposits and withdrawals).
- - Created the `PersonalAccount` class to manage the account balance and transaction history.
- - Implemented a menu system for user interaction.
- - Added balance checks before withdrawals to prevent overdraft.
+## File Structure  
+The project contains the following files:
+
+- **`device.py`**: Contains the base class `Device`, which is inherited by the specific device classes.
+- **`products.py`**: Contains the device classes: `Smartphone`, `Laptop`, `Tablet`.
+- **`cart.py`**: The `Cart` class, with methods for adding, removing, and completing purchases.
+- **`main.py`**: The main interface for interacting with the user.
+- **`test.py`**: Contains tests to ensure the correctness of the classes.
+
+## How It Works  
+The user interacts with the system through the following options:
+
+1. **Add Device to Cart**: Add a smartphone, laptop, or tablet to the shopping cart.
+2. **Remove Device from Cart**: Remove a specific device from the cart.
+3. **Check Cart**: Display the devices currently in the cart.
+4. **Complete Purchase**: Finalize the purchase and display the total amount.
+5. **Exit**: Exit the program.
+
+## Features Implemented
+- Created the `Device` class as the base class for all device types.
+- Implemented the `Smartphone`, `Laptop`, and `Tablet` classes, inheriting from `Device`.
+- Developed the `Cart` class for managing a shopping cart, with the ability to add, remove, and check devices in the cart.
+- Implemented basic user interaction with options to manage devices and purchase.
