@@ -180,3 +180,118 @@ Press Enter to exit terminal
 - ✔ Constructs a `DataFrame` containing exam data and prints it.
 - ✔ Filters and prints rows where attempts exceed 2.
 
+
+# THIRD ASSIGNMENT - Data Cleaning FAQ
+
+## 1. Handling Missing Data
+
+### How do you identify and handle missing values in a Pandas DataFrame?
+- Use `.isnull().sum()` to check for missing values.
+- Fill missing values with `.fillna()`, using mean, median, or mode.
+- Drop rows with `.dropna()` if missing data is significant.
+
+**(Как определить и обработать пропущенные значения в Pandas?)**
+- Используйте `.isnull().sum()`, чтобы проверить пропуски.
+- Заполняйте `.fillna()`, используя среднее, медиану или моду.
+- Удаляйте строки `.dropna()`, если пропущено слишком много данных.
+
+### What is imputation, and why is it useful?
+- Imputation replaces missing values with estimated values (mean, median, etc.).
+- Prevents data loss and keeps dataset consistent.
+
+**(Что такое импутация и зачем она нужна?)**
+- Импутация заменяет пропущенные значения предсказанными (среднее, медиана и т. д.).
+- Это предотвращает потерю данных и делает набор данных стабильным.
+
+---
+
+## 2. Data Transformation
+
+### How can you encode categorical variables in Pandas?
+- Use `.astype('category').cat.codes` for simple encoding.
+- Use `pd.get_dummies()` for one-hot encoding.
+
+**(Как закодировать категориальные переменные в Pandas?)**
+- Используйте `.astype('category').cat.codes` для простой замены.
+- Применяйте `pd.get_dummies()` для one-hot кодирования.
+
+### What is one-hot encoding, and when should you use it?
+- Converts categories into binary columns (0s and 1s).
+- Useful when categories have no natural order.
+
+**(Что такое one-hot encoding и когда его использовать?)**
+- Преобразует категории в бинарные столбцы (0 и 1).
+- Полезно, если у категорий нет естественного порядка.
+
+---
+
+## 3. Removing Duplicates
+
+### How do you identify and remove duplicate rows from a DataFrame?
+- Use `.duplicated()` to find duplicates.
+- Use `.drop_duplicates()` to remove them.
+
+**(Как найти и удалить дубликаты в DataFrame?)**
+- Используйте `.duplicated()` для поиска.
+- Примените `.drop_duplicates()` для удаления.
+
+### What is the difference between `duplicated()` and `drop_duplicates()`?
+- `.duplicated()` marks duplicate rows as `True`.
+- `.drop_duplicates()` removes duplicate rows from the DataFrame.
+
+**(В чём разница между ****`duplicated()`**** и ****`drop_duplicates()`****?)**
+- `.duplicated()` помечает дубликаты.
+- `.drop_duplicates()` удаляет их.
+
+---
+
+## 4. Data Scaling and Normalization
+
+### Why is feature scaling important in machine learning?
+- Some models (e.g., gradient descent) work poorly with large-scale differences.
+- Scaling improves training speed and accuracy.
+
+**(Почему масштабирование важно в ML?)**
+- Некоторые модели (например, градиентный спуск) чувствительны к масштабу.
+- Масштабирование ускоряет обучение и повышает точность.
+
+### Difference between min-max scaling and z-score normalization?
+- **Min-Max Scaling**: Rescales data to range [0,1].
+- **Z-score Normalization**: Centers data around mean (0) and scales to standard deviation (1).
+
+**(Разница между min-max и z-score нормализацией?)**
+- **Min-Max Scaling**: Приводит данные в диапазон [0,1].
+- **Z-score Normalization**: Делает среднее 0 и стандартное отклонение 1.
+
+---
+
+## 5. Handling Outliers
+
+### What are outliers, and why do they impact models?
+- Outliers are extreme values that differ significantly from others.
+- They can distort statistics and reduce model accuracy.
+
+**(Что такое выбросы и как они влияют?)**
+- Выбросы — это сильно отличающиеся значения.
+- Они искажают данные и ухудшают модели.
+
+### Methods for detecting outliers in Python?
+- **IQR Method**: Values outside 1.5 \* IQR are outliers.
+- **Z-score**: Values >3 standard deviations are outliers.
+- **Boxplot**: Graphically detects outliers.
+
+**(Как обнаружить выбросы в Python?)**
+- **Метод IQR**: Значения за границами 1.5 \* IQR — выбросы.
+- **Z-score**: Значения >3 стандартных отклонений — выбросы.
+- **Boxplot**: График помогает обнаружить выбросы.
+
+### How to handle outliers in a continuous numerical variable?
+- **Remove outliers** if they are errors.
+- **Transform values** (log or square root transformation).
+- **Cap values** to reasonable limits.
+
+**(Как обработать выбросы?)**
+- **Удалить выбросы**, если это ошибки.
+- **Трансформировать данные** (логарифм, корень).
+- **Ограничить значения** до адекватного предела.
+
