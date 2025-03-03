@@ -1,4 +1,4 @@
-#first Q
+print('first Q')
 import pandas as pd
 import numpy as np
 
@@ -18,9 +18,9 @@ df['B'].fillna(df['B'].median(), inplace=True)  # Replace NaN with mean value
 # Filling categorical NaN values
 df['C'].fillna(df['C'].mode()[0], inplace=True)  # Replace with most frequent value (mode)
 print("\nDataFrame after filling missing values:\n", df)
+print()
 
-
-#second Q
+print('second Q')
 import pandas as pd
 
 # Creating a DataFrame with categorical data
@@ -35,9 +35,9 @@ df['Color_Label'] = df['Color'].astype('category').cat.codes
 df_one_hot = pd.get_dummies(df, columns=['Size'])
 print("Label Encoding:\n", df[['Color', 'Color_Label']])
 print("\nOne-Hot Encoding:\n", df_one_hot)
+print()
 
-
-#third Q
+print('third Q')
 import pandas as pd
 
 # Creating a DataFrame with duplicate rows
@@ -51,9 +51,9 @@ print("Duplicate Rows:\n", df.duplicated())
 # Removing duplicates (keeps the first occurrence)
 df_no_duplicates = df.drop_duplicates()
 print("\nDataFrame after removing duplicates:\n", df_no_duplicates)
+print()
 
-
-# forth Q
+print('forth Q')
 import pandas as pd
 import numpy as np
 
@@ -66,9 +66,9 @@ df['MinMax_Scaled'] = (df['Value'] - df['Value'].min()) / (df['Value'].max() - d
 # Z-score Normalization: Normalizes values to have a mean of 0 and a standard deviation of 1 using (X - mean) / std.
 df['Z_Score_Scaled'] = (df['Value'] - df['Value'].mean()) / df['Value'].std()
 print(df)
+print()
 
-
-# fifth Q
+print('fifth Q')
 import pandas as pd
 import numpy as np
 
