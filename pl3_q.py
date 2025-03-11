@@ -12,11 +12,11 @@ df = pd.DataFrame({
 print("Missing values:\n", df.isnull().sum())
 
 # Filling numeric NaN values
-df['A'].fillna(df['A'].mean(), inplace=True)  # Replace NaN with mean value
-df['B'].fillna(df['B'].median(), inplace=True)  # Replace NaN with mean value
+df['A'] = df['A'].fillna(df['A'].mean())  # Replace NaN with mean value
+df['B'] = df['B'].fillna(df['B'].median())  # Replace NaN with mean value
 
 # Filling categorical NaN values
-df['C'].fillna(df['C'].mode()[0], inplace=True)  # Replace with most frequent value (mode)
+df['C'] = df['C'].fillna(df['C'].mode()[0])  # Replace with most frequent value (mode)
 print("\nDataFrame after filling missing values:\n", df)
 print()
 
@@ -65,8 +65,8 @@ df['MinMax_Scaled'] = (df['Value'] - df['Value'].min()) / (df['Value'].max() - d
 
 # Z-score Normalization: Normalizes values to have a mean of 0 and a standard deviation of 1 using (X - mean) / std.
 df['Z_Score_Scaled'] = (df['Value'] - df['Value'].mean()) / df['Value'].std()
+
 print(df)
-print()
 
 print('fifth Q')
 import pandas as pd
