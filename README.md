@@ -190,18 +190,9 @@ Press Enter to exit terminal
 - Fill missing values with `.fillna()`, using mean, median, or mode.
 - Drop rows with `.dropna()` if missing data is significant.
 
-**(Как определить и обработать пропущенные значения в Pandas?)**
-- Используйте `.isnull().sum()`, чтобы проверить пропущенные значения.
-- Заполняйте `.fillna()`, используя среднее (mean), медиану (median) или моду (mode).
-- Удаляйте строки с `.dropna()`, если пропущенных данных слишком много.
-
 ### What is imputation, and why is it useful?
 - Imputation replaces missing values with estimated values (mean, median, etc.).
 - Prevents data loss and keeps the dataset consistent.
-
-**(Что такое импутация и зачем она нужна?)**
-- Импутация заменяет пропущенные значения вычисленными (среднее, медиана и т. д.).
-- Это предотвращает потерю данных и делает набор данных стабильным.
 
 ---
 
@@ -211,18 +202,10 @@ Press Enter to exit terminal
 - Use `.astype('category').cat.codes` for simple encoding.
 - Use `pd.get_dummies()` for one-hot encoding.
 
-**(Как закодировать категориальные переменные в Pandas?)**
-- Используйте `.astype('category').cat.codes` для простого кодирования.
-- Применяйте `pd.get_dummies()` для one-hot кодирования.
-
 ### What is one-hot encoding, and when should you use it?
 - Converts categories into binary columns (0s and 1s).
 - Useful when categories have no natural order.
-
-**(Что такое one-hot encoding и когда его использовать?)**
-- Преобразует категории в бинарные столбцы (0 и 1).
-- Полезно, если у категорий нет естественного порядка.
-
+- 
 ---
 
 ## 3. Removing Duplicates
@@ -231,18 +214,10 @@ Press Enter to exit terminal
 - Use `.duplicated()` to find duplicates.
 - Use `.drop_duplicates()` to remove them.
 
-**(Как найти и удалить дубликаты в DataFrame?)**
-- Используйте `.duplicated()`, чтобы найти дубликаты.
-- Примените `.drop_duplicates()`, чтобы удалить их.
-
 ### What is the difference between `duplicated()` and `drop_duplicates()`?
 - `.duplicated()` marks duplicate rows as `True`.
 - `.drop_duplicates()` removes duplicate rows from the DataFrame.
-
-**(В чём разница между `duplicated()` и `drop_duplicates()`?)**
-- `.duplicated()` помечает дубликаты значением `True`.
-- `.drop_duplicates()` удаляет дубликаты из DataFrame.
-
+  
 ---
 
 ## 4. Data Scaling and Normalization
@@ -251,17 +226,9 @@ Press Enter to exit terminal
 - Some models (e.g., gradient descent) work poorly with large-scale differences.
 - Scaling improves training speed and accuracy.
 
-**(Почему масштабирование важно в машинном обучении?)**
-- Некоторые модели (например, градиентный спуск) чувствительны к масштабу признаков.
-- Масштабирование ускоряет обучение и повышает точность модели.
-
 ### Difference between min-max scaling and z-score normalization?
 - **Min-Max Scaling**: Rescales data to range [0,1].
 - **Z-score Normalization**: Centers data around the mean (0) and scales to a standard deviation of 1.
-
-**(Разница между min-max масштабированием и z-score нормализацией?)**
-- **Min-Max Scaling**: Приводит данные в диапазон [0,1].
-- **Z-score Normalization**: Центрирует данные относительно среднего (0) и масштабирует их до стандартного отклонения 1.
 
 ---
 
@@ -271,29 +238,12 @@ Press Enter to exit terminal
 - Outliers are extreme values that differ significantly from others.
 - They can distort statistics and reduce model accuracy.
 
-**(Что такое выбросы и как они влияют на модели?)**
-- Выбросы — это значения, сильно отличающиеся от остальных.
-- Они могут искажать статистику и снижать точность модели.
-
 ### Methods for detecting outliers in Python?
 - **IQR Method**: Values outside 1.5 * IQR are outliers.
 - **Z-score**: Values >3 standard deviations are outliers.
 - **Boxplot**: Graphically detects outliers.
 
-**(Как обнаружить выбросы в Python?)**
-- **Метод IQR**: Значения за границами 1.5 * IQR считаются выбросами.
-- **Z-score**: Значения больше 3 стандартных отклонений считаются выбросами.
-- **Boxplot**: График, который помогает визуально обнаружить выбросы.
-
 ### How to handle outliers in a continuous numerical variable?
 - **Remove outliers** if they are errors.
 - **Transform values** (log or square root transformation).
 - **Cap values** to reasonable limits.
-
-**(Как обработать выбросы в непрерывных числовых данных?)**
-- **Удалить выбросы**, если они являются ошибками.
-- **Трансформировать значения** (логарифмическое или корневое преобразование).
-- **Ограничить значения** в разумных пределах.
-
-
-
