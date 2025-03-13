@@ -14,7 +14,7 @@ class CalculatorWindow(QWidget):
         layout = QVBoxLayout()
 
         self.input_field = QLineEdit(self)
-        self.input_field.setReadOnly(True) 
+        self.input_field.setReadOnly(True)  
         layout.addWidget(self.input_field)
 
         button_layout = QGridLayout()
@@ -25,10 +25,10 @@ class CalculatorWindow(QWidget):
             ('1', 2, 0), ('2', 2, 1), ('3', 2, 2), ('-', 2, 3),
             ('0', 3, 0), ('.', 3, 1), ('+', 3, 2), ('=', 3, 3),  ]
 
-        self.buttons = {}  # Dictionary to store buttons
+        self.buttons = {} 
         for (text, row, col) in buttons:
             button = QPushButton(text)
-            self.buttons[text] = button 
+            self.buttons[text] = button  
             button_layout.addWidget(button, row, col)
 
         clear_button = QPushButton('C')
@@ -36,5 +36,4 @@ class CalculatorWindow(QWidget):
         button_layout.addWidget(clear_button, 4, 0, 1, 4)
 
         layout.addLayout(button_layout)
-
         self.setLayout(layout)
