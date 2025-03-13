@@ -1,54 +1,65 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QPushButton
-from model import Calculator
-from view import CalculatorWindow
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QPushButton, QListWidget
+from PyQt5.QtCore import Qt
 
-class CalculatorController:
+class Controller:
     def __init__(self):
-        self.calculator = Calculator()  # Create a calculator object
-        self.window = CalculatorWindow(self.calculator)  # Pass calculator to the window
-        self.setup()
+        self.calculator = Calculator()  # Create a Calculator instance
+        self.window = QWidget()
+        self.setup_ui()
 
-    def setup(self):
-        # Add event handlers for the buttons
-        self.window.button0.clicked.connect(lambda: self.on_button_click('0'))
-        self.window.button1.clicked.connect(lambda: self.on_button_click('1'))
-        self.window.button2.clicked.connect(lambda: self.on_button_click('2'))
-        self.window.button3.clicked.connect(lambda: self.on_button_click('3'))
-        self.window.button4.clicked.connect(lambda: self.on_button_click('4'))
-        self.window.button5.clicked.connect(lambda: self.on_button_click('5'))
-        self.window.button6.clicked.connect(lambda: self.on_button_click('6'))
-        self.window.button7.clicked.connect(lambda: self.on_button_click('7'))
-        self.window.button8.clicked.connect(lambda: self.on_button_click('8'))
-        self.window.button9.clicked.connect(lambda: self.on_button_click('9'))
-        self.window.button_plus.clicked.connect(lambda: self.on_operator_click('+'))
-        self.window.button_minus.clicked.connect(lambda: self.on_operator_click('-'))
-        self.window.button_mul.clicked.connect(lambda: self.on_operator_click('*'))
-        self.window.button_div.clicked.connect(lambda: self.on_operator_click('/'))
-        self.window.button_clear.clicked.connect(self.on_clear)
-        self.window.button_equals.clicked.connect(self.on_equals)
+    def setup_ui(self):
+        self.window.setWindowTitle("Calculator")
+
+        layout = QVBoxLayout()
+        self.input_field = QLineEdit(self.window)
+        layout.addWidget(self.input_field)
+
+        button_layout = QVBoxLayout()
+
+        buttons = [
+            ('7', self.on_button_click), ('8', self.on_button_click), ('9', self.on_button_click), ('/', self.on_button_click),
+            ('4', self.on_button_click), ('5', self.on_button_click), ('6', self.on_button_click), ('*', self.on_button_click),
+            ('1', self.on_button_click), ('2', self.on_button_click), ('3', self.on_button_click), ('-', self.on_button_click),
+            ('0', self.on_button_click), ('.', self.on_button_click), ('+', self.on_button_click), ('=', self.on_equals)
+        ]
+
+        for text, func in buttons:
+            button = QPushButton(text)
+            button.clicked.connect(lambda _, b=text: func(b))
+            button_layout.addWidget(button)
+
+        clear_button = QPushButton('C')
+        clear_button.clicked.connect(self.on_clear)
+        button_layout.addWidget(clear_button)
+
+        self.history_list = QListWidget(self.window)
+        layout.addWidget(self.history_list)
+        layout.addLayout(button_layout)
+        self.window.setLayout(layout)
+
+        self.window.setFocusPolicy(Qt.StrongFocus)
 
     def on_button_click(self, char):
-        """Add a character to the calculator's expression"""
+        """Add character to the current expression."""
         self.calculator.add_to_expression(char)
-        self.window.input.setText(self.calculator.get_expression())
-
-    def on_operator_click(self, operator):
-        """Add an operator to the calculator's expression"""
-        self.calculator.add_to_expression(operator)
-        self.window.input.setText(self.calculator.get_expression())
+        self.input_field.setText(self.calculator.get_expression())
 
     def on_clear(self):
-        """Clear the calculator's expression"""
+        """Clear the input field and expression."""
         self.calculator.clear_expression()
-        self.window.input.clear()
+        self.input_field.clear()
 
-    def on_equals(self):
-        """Calculate the result of the expression"""
+    def on_equals(self, _):
+        """Calculate the result of the expression."""
         result = self.calculator.calculate()
-        self.window.input.setText(str(result))
+        self.input_field.setText(str(result))
+        self.history_list.addItem(f"{self.calculator.get_expression()} = {result}")
+
+    def show(self):
+        self.window.show()
 
 if __name__ == '__main__':
     app = QApplication([])
-    controller = CalculatorController()
-    controller.window.show()
+    controller = Controller()
+    controller.show()
     app.exec_()
