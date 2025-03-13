@@ -1,21 +1,31 @@
 class Calculator:
     def __init__(self):
-        self.expression = ""  # храним текущее выражение
+        """Initialize the Calculator object with an empty expression."""
+        self.expression = ""
 
     def add_to_expression(self, char: str):
-        self.expression += char  # добавляем символ в выражение
+        """Add a character (digit or operator) to the current expression."""
+        self.expression += char
 
     def remove_last_character(self):
-        self.expression = self.expression[:-1]  # удаляем последний символ
+        """Remove the last character from the current expression."""
+        self.expression = self.expression[:-1]
 
     def clear_expression(self):
-        self.expression = ""  # очищаем выражение
+        """Clear the current expression."""
+        self.expression = ""
 
     def calculate(self):
+        """Evaluate the current mathematical expression and return the result."""
         try:
-            return eval(self.expression)  # вычисляем выражение
-        except Exception as e:
-            return f"Ошибка: {str(e)}"  # если ошибка, выводим сообщение
+            result = eval(self.expression)
+            return result
+        except ZeroDivisionError:
+            return "Error: Division by zero"
+        except Exception:
+            return "Error: Invalid expression"
 
     def get_expression(self):
-        return self.expression  # возвращаем текущее выражение
+        """Return the current mathematical expression."""
+        return self.expression
+
