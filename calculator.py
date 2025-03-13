@@ -1,6 +1,5 @@
 class Calculator:
     def __init__(self):
-        """Initialize the Calculator object with an empty expression."""
         self.expression = ""
 
     def add_to_expression(self, char: str):
@@ -20,6 +19,7 @@ class Calculator:
         try:
             if "/0" in self.expression:  
                 return "Error: Division by zero"
+            
             result = eval(self.expression)
             return result
         except ZeroDivisionError:
