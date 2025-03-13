@@ -1,6 +1,9 @@
+import sys
+from PyQt6.QtWidgets import QApplication
+from controller import Controller
+
 if __name__ == '__main__':
-    import sys
     app = QApplication(sys.argv)
-    window = CalculatorWindow()
-    window.show()
-    sys.exit(app.exec_())
+    controller = Controller()
+    controller.show()
+    sys.exit(app.exec())
