@@ -6,11 +6,14 @@ class Controller:
         """Initialize the controller with a calculator instance and the window."""
         self.calculator = Calculator()  
         self.window = CalculatorWindow(self.calculator)  
-        self.connect_signals()
+        self.connect_signals()  # Connect signals when controller is initialized
 
     def connect_signals(self):
         """Connect signals for interaction with the window and calculator."""
-        pass
+        self.window.digit_button_clicked.connect(self.on_button_click)
+        self.window.operator_button_clicked.connect(self.on_button_click)
+        self.window.clear_button_clicked.connect(self.on_clear)
+        self.window.equals_button_clicked.connect(self.on_equals)
 
     def show(self):
         """Display the calculator window."""
