@@ -1,7 +1,12 @@
+from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QGridLayout, QLineEdit, QPushButton
-from PyQt5.QtCore import Qt
 
 class CalculatorWindow(QWidget):
+    digit_button_clicked = pyqtSignal(str)
+    operator_button_clicked = pyqtSignal(str)
+    clear_button_clicked = pyqtSignal()
+    equals_button_clicked = pyqtSignal()
+
     def __init__(self, calculator):
         """Initialize the calculator window and components."""
         super().__init__()
@@ -11,7 +16,7 @@ class CalculatorWindow(QWidget):
     def init_ui(self):
         """Set up the user interface with buttons and input field."""
         self.setWindowTitle('Calculator')
-        self.setGeometry(100, 100, 300, 400) 
+        self.setGeometry(100, 100, 300, 400)  
 
         layout = QVBoxLayout()
 
@@ -34,23 +39,26 @@ class CalculatorWindow(QWidget):
             button = QPushButton(text)
             button.setStyleSheet("font-size: 20px; height: 50px;")
             self.buttons[text] = button  
-            button.clicked.connect(lambda _, b=text: self.on_button_click(b))  
+            if text in '0123456789': 
+                button.clicked.connect(lambda _, b=text: self.digit_button_clicked.emit(b))
+            elif text in '+-*/':  
+                button.clicked.connect(lambda _, b=text: self.operator_button_clicked.emit(b))
+            elif text == '=': 
+                button.clicked.connect(self.equals_button_clicked.emit)
             button_layout.addWidget(button, row, col)
 
         clear_button = QPushButton('C')
         clear_button.setStyleSheet("font-size: 20px; height: 50px;")
-        clear_button.clicked.connect(self.on_clear)
-        button_layout.addWidget(clear_button, 4, 0, 1, 4)  
+        clear_button.clicked.connect(self.clear_button_clicked.emit)
+        button_layout.addWidget(clear_button, 4, 0, 1, 4) 
 
         layout.addLayout(button_layout)
         self.setLayout(layout)
 
-    def on_button_click(self, char):
-        """Add character to the current expression."""
-        self.calculator.add_to_expression(char)
-        self.input_field.setText(self.calculator.get_expression())
+    def update_input_field(self, text):
+        """Update the input field with new text."""
+        self.input_field.setText(text)
 
-    def on_clear(self):
-        """Clear the input field and expression."""
-        self.calculator.clear_expression()
-        self.input_field.clear()
+    def add_to_history(self, entry):
+        """Optional method to add calculations to history."""
+        print(f"History: {entry}")
