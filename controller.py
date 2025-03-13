@@ -1,3 +1,5 @@
+from PyQt5.QtWidgets import QApplication
+import sys
 from calculator import Calculator
 from view import CalculatorWindow
 
@@ -6,7 +8,7 @@ class Controller:
         """Initialize the controller with a calculator instance and the window."""
         self.calculator = Calculator()  
         self.window = CalculatorWindow(self.calculator)  
-        self.connect_signals()  # Connect signals when controller is initialized
+        self.connect_signals()
 
     def connect_signals(self):
         """Connect signals for interaction with the window and calculator."""
@@ -38,3 +40,9 @@ class Controller:
     def update_display(self):
         """Update the input field with the current expression."""
         self.window.update_input_field(self.calculator.get_expression())
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)  
+    controller = Controller()
+    controller.show()  
+    sys.exit(app.exec_())  
