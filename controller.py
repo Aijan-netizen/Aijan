@@ -4,12 +4,12 @@ from view import CalculatorWindow
 
 class CalculatorController:
     def __init__(self):
-        self.calculator = Calculator()  # Создаем объект калькулятора
-        self.window = CalculatorWindow(self.calculator)  # Передаем калькулятор в окно
+        self.calculator = Calculator()  # Create a calculator object
+        self.window = CalculatorWindow(self.calculator)  # Pass calculator to the window
         self.setup()
 
     def setup(self):
-        # Добавляем обработчики событий
+        # Add event handlers for the buttons
         self.window.button0.clicked.connect(lambda: self.on_button_click('0'))
         self.window.button1.clicked.connect(lambda: self.on_button_click('1'))
         self.window.button2.clicked.connect(lambda: self.on_button_click('2'))
@@ -28,22 +28,22 @@ class CalculatorController:
         self.window.button_equals.clicked.connect(self.on_equals)
 
     def on_button_click(self, char):
-        """Добавляем символ в выражение калькулятора"""
+        """Add a character to the calculator's expression"""
         self.calculator.add_to_expression(char)
         self.window.input.setText(self.calculator.get_expression())
 
     def on_operator_click(self, operator):
-        """Добавляем оператор в выражение калькулятора"""
+        """Add an operator to the calculator's expression"""
         self.calculator.add_to_expression(operator)
         self.window.input.setText(self.calculator.get_expression())
 
     def on_clear(self):
-        """Очистить выражение калькулятора"""
+        """Clear the calculator's expression"""
         self.calculator.clear_expression()
         self.window.input.clear()
 
     def on_equals(self):
-        """Вычислить результат выражения"""
+        """Calculate the result of the expression"""
         result = self.calculator.calculate()
         self.window.input.setText(str(result))
 
