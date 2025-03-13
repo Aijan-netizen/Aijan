@@ -20,7 +20,6 @@ class Calculator:
         try:
             if "/0" in self.expression:  
                 return "Error: Division by zero"
-            
             result = eval(self.expression)
             return result
         except ZeroDivisionError:
@@ -31,4 +30,3 @@ class Calculator:
     def get_expression(self):
         """Return the current mathematical expression."""
         return self.expression
-
