@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QGridLayout, QLineEdit, QPushButton
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QGridLayout, QLineEdit, QPushButton
 
 class CalculatorWindow(QWidget):
     def __init__(self, calculator):
@@ -37,3 +37,11 @@ class CalculatorWindow(QWidget):
 
         layout.addLayout(button_layout)
         self.setLayout(layout)
+
+    def update_input_field(self, text):
+        """Update the input field with the given text."""
+        self.input_field.setText(text)
+
+    def add_to_history(self, text):
+        """Add the calculation to history (if needed)."""
+        pass
