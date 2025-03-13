@@ -18,12 +18,15 @@ class Calculator:
     def calculate(self):
         """Evaluate the current mathematical expression and return the result."""
         try:
+            if "/0" in self.expression:  
+                return "Error: Division by zero"
+            
             result = eval(self.expression)
             return result
         except ZeroDivisionError:
             return "Error: Division by zero"
-        except Exception:
-            return "Error: Invalid expression"
+        except Exception as e:
+            return f"Error: {str(e)}"  
 
     def get_expression(self):
         """Return the current mathematical expression."""
