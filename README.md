@@ -37,7 +37,7 @@ The project consists of four main files:
 ---
 ### Examples
 
-![р ](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/0.png)
+![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/0.PNG)
 
 ---
 ## What I Have Done
