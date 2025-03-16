@@ -1,7 +1,5 @@
-from PyQt5.QtWidgets import QApplication
-import sys
-from calculator import Calculator
 from view import CalculatorWindow
+from calculator import Calculator
 
 class Controller:
     def __init__(self):
@@ -40,9 +38,3 @@ class Controller:
     def update_display(self):
         """Update the input field with the current expression."""
         self.window.update_input_field(self.calculator.get_expression())
-
-if __name__ == '__main__':
-    app = QApplication(sys.argv)  
-    controller = Controller()
-    controller.show()  
-    sys.exit(app.exec_())  
