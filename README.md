@@ -48,7 +48,7 @@ The project consists of four main files:
    *Example 3: Clear button (C) working to reset the current expression.*
 
 4. ![Multiple Operations](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/3.PNG)  
-   *Example 4: Performing multiple operations in one calculation ().*
+   *Example 4: Performing multiple operations in one calculation.*
 
 5. ![Error Handling](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/е.PNG)  
    *Example 5: Operation with an error, showing invalid input or result.*
