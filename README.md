@@ -29,9 +29,25 @@ The project consists of four main files:
 - **Smooth scrolling**: The history list scrolls smoothly when a new entry is added.
 
 ---
+### 🔹 Calculator UI:
+- Input Field: Displays the current expression or result.
+- History List: Shows the list of previous calculations.
+- Buttons: Numeric buttons `(0-9)`, decimal point `(.)`, arithmetic operators `(+, -, *, /)`, equals button `(=)`, and a clear button `(C)`.
+
+---
+
 ## What I Have Done
  - Created the `Calculator` class to manage mathematical operations, expression handling, and evaluation.
  - Created the `Controller` class to link the calculator logic with the view. It handles button clicks and updates the display.
  - Designed the `CalculatorWindow` class to define the user interface (buttons, input field, history list) using PyQt5.
  - Implemented event-driven programming: The controller responds to user inputs (button clicks) and updates the display accordingly.
  - Smooth scrolling for history: When a new calculation is added, the history list scrolls smoothly to show the latest result.
+
+---
+## Tools and Libraries Used
+- Python 3.x — The primary programming language used for developing the application.
+- PyQt5 — The library used for creating the graphical user interface (GUI).
+- Qt Designer — A tool for designing user interfaces, used alongside PyQt5.
+- VS Code — The text editor used for writing and editing the code.
+- Pip — The package manager used for installing dependencies (e.g., PyQt5).
+- Git — The version control system used for managing the repository.
