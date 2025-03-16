@@ -42,6 +42,7 @@ Example 2 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignm
 Example 3 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/2.PNG)
 Example 4 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/3.PNG)
 Example 5 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/e.PNG)
+ex ![Screenshots](https://github.com/Aijan-netizen/Aijan/blob/oop-7-assignment/images/е.PNG)
 ---
 ## What I Have Done
  - Created the `Calculator` class to manage mathematical operations, expression handling, and evaluation.
