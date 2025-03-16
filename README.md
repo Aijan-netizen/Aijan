@@ -37,8 +37,11 @@ The project consists of four main files:
 ---
 ### Examples
 
-![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/0.PNG)
-
+Example 1 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/0.PNG)
+Example 2 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/1.PNG)
+Example 3 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/2.PNG)
+Example 4 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/3.PNG)
+Example 5 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/e.PNG)
 ---
 ## What I Have Done
  - Created the `Calculator` class to manage mathematical operations, expression handling, and evaluation.
