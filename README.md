@@ -35,7 +35,10 @@ The project consists of four main files:
 - Buttons: Numeric buttons `(0-9)`, decimal point `(.)`, arithmetic operators `(+, -, *, /)`, equals button `(=)`, and a clear button `(C)`.
 
 ---
+### Examples
 
+
+---
 ## What I Have Done
  - Created the `Calculator` class to manage mathematical operations, expression handling, and evaluation.
  - Created the `Controller` class to link the calculator logic with the view. It handles button clicks and updates the display.
