@@ -37,7 +37,7 @@ The project consists of four main files:
 ---
 ### Examples
 
-[![My Image](images/Снимок.png)](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/screenshot.png)
+
 ---
 ## What I Have Done
  - Created the `Calculator` class to manage mathematical operations, expression handling, and evaluation.
