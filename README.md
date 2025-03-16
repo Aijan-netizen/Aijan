@@ -37,6 +37,7 @@ The project consists of four main files:
 ---
 ### Examples
 
+![My Image](images/Снимок.png)
 
 ---
 ## What I Have Done
