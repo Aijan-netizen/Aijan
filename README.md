@@ -38,16 +38,20 @@ The project consists of four main files:
 
 ### Examples
 
-1. ![Screenshot 1](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/0.PNG)  
-   *Example 1: Showing the main screen with basic operations.*
-2. ![Screenshot 2](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/1.PNG)  
-   *Example 2: Showing result of addition operation.*
-3. ![Screenshot 3](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/2.PNG)  
-   *Example 3: Showing division result.*
-4. ![Screenshot 4](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/3.PNG)  
-   *Example 4: Showing error message for invalid input.*
-5. ![Screenshot 5](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/е.PNG)  
-   *Example 5: Showing the history of previous calculations.*
+1. ![Interface](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/0.PNG)  
+   *Example 1: Calculator Interface.*
+
+2. ![Basic Operations](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/1.PNG)  
+   *Example 2: Performing basic operations.*
+
+3. ![Clear Function](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/2.PNG)  
+   *Example 3: Clear button (C) working to reset the current expression.*
+
+4. ![Multiple Operations](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/3.PNG)  
+   *Example 4: Performing multiple operations in one calculation ().*
+
+5. ![Error Handling](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/е.PNG)  
+   *Example 5: Operation with an error, showing invalid input or result.*
 
 ---
 
