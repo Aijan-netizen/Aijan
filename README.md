@@ -1,4 +1,4 @@
-# SECOND ASSIGNMENT 
+#  ASSIGNMENT 
 ## Book Class 
 This project contains a `Book` class written in Python. It demonstrates object-oriented programming by defining attributes and methods for a book.
 ### Class Description  
@@ -14,7 +14,6 @@ This project contains a `Book` class written in Python. It demonstrates object-o
    - 'info()' - Displays book details(title, author, ISBN, price).  
    - 'read()' - Simulates reading the book by printing a message "You are reading (book title).". 
 
-# THIRD ASSIGNMENT
 ## Personal Account Management
 This is a Python program to manage a personal bank account. It allows users to:
  - Deposit money
