@@ -1,75 +1,37 @@
-#  ASSIGNMENT 
-## Book Class 
-This project contains a `Book` class written in Python. It demonstrates object-oriented programming by defining attributes and methods for a book.
-### Class Description  
- - Attributes:
-   - 'title' (str): The title of the book.
-   - 'author' (str): The author of the book.
-   - 'ISBN' (str): The International Standard Book Number of the book (optional).
-   - 'price' (float): The price of the book (optional).
- - Constructors:
-   - Parameterized constructor: Initializes all attributes with specific values.
-   - Default constructor: Initializes attributes with default values (None for string attributes and 0.0 for price).
- - Methods:  
-   - 'info()' - Displays book details(title, author, ISBN, price).  
-   - 'read()' - Simulates reading the book by printing a message "You are reading (book title).". 
+# SEVENTH ASSIGNMENT 
+# Calculator Application
 
-## Personal Account Management
-This is a Python program to manage a personal bank account. It allows users to:
- - Deposit money
- - Withdraw money (with balance checks)
- - Check account balance
- - View transaction history.
+This project implements a simple graphical calculator using **PyQt5**. The application handles basic arithmetic operations such as addition, subtraction, multiplication, and division. It follows the **Model-View-Controller** (MVC) design pattern, consisting of multiple components: the **model** (Calculator class), **controller** (Controller class), and **view** (CalculatorWindow class).
 
-The program uses two classes:
- - `Amount`: Represents a single transaction (deposit or withdrawal).
- - `PersonalAccount`: Manages the account, including balance, deposits, withdrawals, and transaction history.
+## Project Structure
 
-##  How It Works  
-### 🔹 Account Setup:  
-- The user provides their **account number** and **name**.  
-### 🔹 Menu Options:  
-1️⃣ **Deposit** – Adds money to the account.  
-2️⃣ **Withdraw** – Removes money from the account, with a check to ensure there are sufficient funds.  
-3️⃣ **Check Balance** – Displays the current balance.  
-4️⃣ **Transaction History** – Shows all past transactions (deposits and withdrawals).  
-5️⃣ **Exit** – Exits the program.  
+The project consists of four main files:
+
+1. **`main.py`** - The entry point for the application. It initializes and runs the PyQt application.
+2. **`calculator.py`** - The model that performs the actual calculations.
+3. **`controller.py`** - The controller that connects the model and view, handling user input and triggering calculations.
+4. **`view.py`** - The view that defines the graphical user interface (GUI) for the calculator.
 
 ---
 
-## 🖥 Example Code Execution  
+## How It Works
 
-```bash
-Enter account number: `240102026`  
-Enter account holder name: `Aijan`  
+### 🔹 Application Flow:
+- The `main.py` file starts the application by initializing a `QApplication` instance and displaying the calculator window.
+- The `Controller` class acts as an intermediary between the user interface (`view.py`) and the calculation logic (`calculator.py`).
+- The `Calculator` class in `calculator.py` manages the mathematical expressions, performs calculations, and keeps track of the entered data.
+- The `CalculatorWindow` class in `view.py` displays the interface, handles button clicks, and shows the results to the user.
 
-1. Deposit  
-2. Withdraw  
-3. Check Balance  
-4. Transaction History  
-5. Exit  
+### 🔹 Features:
+- **Basic arithmetic operations**: Addition, subtraction, multiplication, and division.
+- **Clear functionality**: Resets the current expression.
+- **History**: Displays the past calculations and results.
+- **Smooth scrolling**: The history list scrolls smoothly when a new entry is added.
 
-Choose an option: `1`  
-Enter deposit amount: `200`  
-`Deposited 200 successfully`  
-
-Choose an option: `2`  
-Enter withdrawal amount: `2300`  
-`Insufficient funds`
-
-Choose an option: `3`  
-Current Balance: `200`  
-
-Choose an option: `4`  
-`2025-02-10 12:30:45 - DEPOSIT: 200`  
-
-Choose an option: `5`  
-`Exiting program...`
-
-```
 ---
 ## What I Have Done
- - Created the `Amount` class to handle transactions (deposits and withdrawals).
- - Created the `PersonalAccount` class to manage the account balance and transaction history.
- - Implemented a menu system for user interaction.
- - Added balance checks before withdrawals to prevent overdraft.
+ - Created the `Calculator` class to manage mathematical operations, expression handling, and evaluation.
+ - Created the `Controller` class to link the calculator logic with the view. It handles button clicks and updates the display.
+ - Designed the `CalculatorWindow` class to define the user interface (buttons, input field, history list) using PyQt5.
+ - Implemented event-driven programming: The controller responds to user inputs (button clicks) and updates the display accordingly.
+ - Smooth scrolling for history: When a new calculation is added, the history list scrolls smoothly to show the latest result.
