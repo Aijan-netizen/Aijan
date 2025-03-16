@@ -35,15 +35,22 @@ The project consists of four main files:
 - Buttons: Numeric buttons `(0-9)`, decimal point `(.)`, arithmetic operators `(+, -, *, /)`, equals button `(=)`, and a clear button `(C)`.
 
 ---
+
 ### Examples
 
-Example 1 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/0.PNG)
-Example 2 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/1.PNG)
-Example 3 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/2.PNG)
-Example 4 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/3.PNG)
-Example 5 ![Screenshot](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/e.PNG)
-ex ![Screenshots](https://github.com/Aijan-netizen/Aijan/blob/oop-7-assignment/images/е.PNG)
+1. ![Screenshot 1](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/0.PNG)  
+   *Example 1: Showing the main screen with basic operations.*
+2. ![Screenshot 2](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/1.PNG)  
+   *Example 2: Showing result of addition operation.*
+3. ![Screenshot 3](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/2.PNG)  
+   *Example 3: Showing division result.*
+4. ![Screenshot 4](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/3.PNG)  
+   *Example 4: Showing error message for invalid input.*
+5. ![Screenshot 5](https://github.com/Aijan-netizen/Aijan/raw/oop-7-assignment/images/е.PNG)  
+   *Example 5: Showing the history of previous calculations.*
+
 ---
+
 ## What I Have Done
  - Created the `Calculator` class to manage mathematical operations, expression handling, and evaluation.
  - Created the `Controller` class to link the calculator logic with the view. It handles button clicks and updates the display.
