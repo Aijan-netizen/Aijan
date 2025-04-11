@@ -9,3 +9,4 @@ class Employee:
     def __str__(self):
         return (f"ID: {self.id}, Name: {self.name}, Position: {self.position}, "
                 f"Salary: {self.salary}, Hire Date: {self.hire_date}")
+
