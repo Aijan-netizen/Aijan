@@ -34,3 +34,4 @@ ID: 1, Name: Aizhan, Position: Teacher, Salary: 100000.0, Hire Date: 2025-04-11
 After Deletion:
 (no employees found)
 ```
+![Screenshot](https://github.com/Aijan-netizen/Aijan/blob/oop-8-assignment/images/Снимок.PNG)
