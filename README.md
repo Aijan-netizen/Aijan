@@ -23,7 +23,7 @@ This is a simple command-line application written in Python that manages employe
 - Python 3  
 - SQLite (local database)  
 
-##Example output
+## Example output
 ```
 All Employees:
 ID: 1, Name: Aizhan, Position: Teacher, Salary: 100000.0, Hire Date: 2025-04-11
