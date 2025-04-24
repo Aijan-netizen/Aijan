@@ -31,16 +31,7 @@ Generates a list of 10 random shapes with:
 - Height: 5–20
 - Side Length: 1–10
 
-## 💻 Sample Output
-```text
-Shape: Cylinder
-Surface Area: 487.39
-Volume: 1074.18
-
-Shape: Sphere
-Surface Area: 113.10
-Volume: 381.70
-...
+## 💻 Example Output
 
 ```
 ![Screenshot](https://github.com/Aijan-netizen/Aijan/blob/oop-9-assignment/images/Capture.PNG) 
