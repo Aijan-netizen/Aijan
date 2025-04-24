@@ -1,37 +1,46 @@
-# EIGHTH ASSIGNMENT 
-# Employee Management System (SQLite + Python)
+# NINTH ASSIGNMENT
+# 3D Shape Abstraction in Python
 
-This is a simple command-line application written in Python that manages employee records using SQLite.
+## 📌 Objective
+This project demonstrates the use of **abstraction** and **polymorphism** in Python through an abstract base class `Shape3D` and its subclasses representing 3D shapes: `Sphere`, `Cylinder`, and `Cube`.
 
-## Features
+## 🧱 Implemented Classes
 
-- Add a new employee  
-- View all employees  
-- Get employee by ID  
-- Update employee information  
-- Delete employee by ID  
+### Shape3D (Abstract)
+- `surface_area()` – abstract
+- `volume()` – abstract
 
-## File Structure
+### Sphere
+- Constructor: `__init__(radius)`
+- Surface Area: `4 * π * r²`
+- Volume: `(4/3) * π * r³`
 
-- `employee.py` – Employee data model  
-- `employee_dao.py` – Data access layer (database operations)  
-- `main.py` – Main script to run the program  
-- `employee_db.db` – SQLite database (created automatically)
+### Cylinder
+- Constructor: `__init__(radius, height)`
+- Surface Area: `2 * π * r * (r + h)`
+- Volume: `π * r² * h`
 
-## Technologies Used
+### Cube
+- Constructor: `__init__(side_length)`
+- Surface Area: `6 * a²`
+- Volume: `a³`
 
-- Python 3  
-- SQLite (local database)  
+## 🔁 Random Shape Generator
+Generates a list of 10 random shapes with:
+- Radius: 1–10
+- Height: 5–20
+- Side Length: 1–10
 
-## Example output
-```
-All Employees:
-ID: 1, Name: Aizhan, Position: Teacher, Salary: 100000.0, Hire Date: 2025-04-11
+## 💻 Sample Output
+```text
+Shape: Cylinder
+Surface Area: 487.39
+Volume: 1074.18
 
-Employee with ID = 1:
-ID: 1, Name: Aizhan, Position: Teacher, Salary: 100000.0, Hire Date: 2025-04-11
+Shape: Sphere
+Surface Area: 113.10
+Volume: 381.70
+...
 
-After Deletion:
-(no employees found)
 ```
 ![Screenshot](https://github.com/Aijan-netizen/Aijan/blob/oop-8-assignment/images/Снимок.PNG)
