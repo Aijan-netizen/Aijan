@@ -43,4 +43,4 @@ Volume: 381.70
 ...
 
 ```
-![Screenshot](https://github.com/Aijan-netizen/Aijan/blob/oop-8-assignment/images/Снимок.PNG)
+![Screenshot](https://github.com/Aijan-netizen/Aijan/blob/oop-9-assignment/images/Capture.PNG) 
